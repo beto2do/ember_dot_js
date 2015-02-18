@@ -1,0 +1,20 @@
+{
+  "name": "reading-test",
+  "version": "0.0.1",
+  "authors": [
+    "Humberto Segundo <humberto2do@gmail.com>"
+  ],
+  "description": "Ember component to practice reading in English",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.10.0",
+    "ember-data": "~0.0.14"
+  }
+}
