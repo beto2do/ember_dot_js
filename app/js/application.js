@@ -1,0 +1,1 @@
+window.Test = Ember.Application.create();
