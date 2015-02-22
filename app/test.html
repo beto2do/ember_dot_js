@@ -27,115 +27,81 @@
 <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <body class="page-full-width page-header-fixed">
-	<div class="header navbar navbar-inverse navbar-fixed-top">
-		<div class="header-inner">
-			<a class="navbar-brand" href="index.html">
-			<img src="assets/img/logo.png" width="50" alt="logo" class="img-responsive"/>
-			</a>
-			<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<img src="assets/img/menu-toggler.png" alt=""/>
-			</a>
-			<ul class="nav navbar-nav pull-right">
-				<li class="dropdown user">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-					<img alt="" src="assets/img/beto.jpg" width="30" height="30" />
-					<span class="username">Humberto</span>
-					</a>
-				</li>
-			</ul>
+	<script type="text/x-handlebars" data-template-name="test">
+		<div class="header navbar navbar-inverse navbar-fixed-top">
+			<div class="header-inner">
+				<a class="navbar-brand" href="index.html">
+				<img src="assets/img/logo.png" width="50" alt="logo" class="img-responsive"/>
+				</a>
+				<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<img src="assets/img/menu-toggler.png" alt=""/>
+				</a>
+				<ul class="nav navbar-nav pull-right">
+					<li class="dropdown user">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<img alt="" src="assets/img/beto.jpg" width="30" height="30" />
+						<span class="username">Humberto</span>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
-	<div class="clearfix"></div>
-	<div class="page-container">
-		<div class="page-content-wrapper">
-			<div class="page-content">
-				<div class="row">
-					<div class="col-md-12">
-						<h3 class="page-title">Vocabulary <small>ability</small>
-						</h3>
-						<ul class="page-breadcrumb breadcrumb">
-							<li>
-								<i class="fa fa-home"></i>
-								<a href="#">Home</a>
-								<i class="fa fa-angle-right"></i>
-							</li>
-							<li>
-								<a href="#">Grammar</a>
-								<i class="fa fa-angle-right"></i>
-							</li>
-							<li>
-								<a href="#">Vocabulary</a>
-							</li>
-						</ul>
+		<div class="clearfix"></div>
+		<div class="page-container">
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					<div class="row">
+						<div class="col-md-12">
+							<h3 class="page-title">Vocabulary <small>ability</small>
+							</h3>
+							<ul class="page-breadcrumb breadcrumb">
+								<li>
+									<i class="fa fa-home"></i>
+									<a href="#">Home</a>
+									<i class="fa fa-angle-right"></i>
+								</li>
+								<li>
+									{{#link-to 'test'}}Grammar{{/link-to}}
+									<i class="fa fa-angle-right"></i>
+								</li>
+								<li>
+									{{#link-to 'test.vocabulary'}}Vocabulary{{/link-to}}
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 blog-page">
-						<div class="row">
-							<div class="col-md-9 article-block well">
-								<h5><strong> UNIT 7. Chose the correct options to complete the text.</strong></h5>
-								<div class="blog-tag-data col-md-4">
-									<img src="assets/img/gallery/john.jpeg" class="img-responsive" alt="">
-									<div class="row">
-										<div class="col-md-6">
-											<ul class="list-inline blog-tags">
-												<li>
-													<i class="fa fa-tags"></i>
-													<a href="#">Vocabulary</a>
-													<a href="#">Reading</a>
-													<a href="#">Grammar</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-md-6 blog-tag-data-inner">
-											<ul class="list-inline">
-												<li>
-													<i class="fa fa-calendar"></i><a href="#">February 25, 2015</a>
-												</li>
-											</ul>
-										</div>
+					<div class="row">
+						<div class="col-md-12 blog-page">
+							<div class="row">
+								<div class="col-md-9 article-block well">
+								{{outlet}}
+								</div>
+								<div class="col-md-3 blog-sidebar">
+									<h3>Top Exercises</h3>
+									<div class="top-news">
+										<a href="#" class="btn red">
+										<span>
+											Writing
+										</span>
+										<em>Posted on: Janaury 16, 2015</em>
+										<em>
+										<i class="fa fa-tags"></i>
+										email, Business </em>
+										<i class="fa  fa-file-text-o top-news-icon"></i>
+										</a>
+										<a href="#" class="btn green">
+										<span>
+											Listening
+										</span>
+										<em>Posted on: Dicember 15, 2014</em>
+										<em>
+										<i class="fa fa-tags"></i>
+										Internet, Music, People </em>
+										<i class="fa fa-music top-news-icon"></i>
+										</a>
 									</div>
-								</div>
-								<div class="col-md-8">
-									<p>
-									<strong>S</strong>chooltearchers may be expert <span class="text-info"> 1_____</span> their subject, but they aren't always right about their studient.
-									Some of the most brilliant people in British history were <span class="text-info"> 2_____</span> at shool report and got terrible reports. In his school report, John Lennon was describe as <span class="text-info"> 3_____</span> - certainly on the road to failure. Winston Churchill, future Prime Minister and probably Britain's most <span class="text-info"> 4_____</span> politian, clearly bad a lot <span class="text-info"> 5_____</span> as a student, but his behaviour was so bad that his teacher wrote, I really don't know what to do. Stephe Fry's teacher didn't realise Fry had an <span class="text-info"> 6_____</span> English. A fine actor, comedian and writer, Fry was bottom of his class. Robert Graves, a <span class="text-info"> 7_____</span> shoolboy writer who became one of Britain's greatest poets, left school with this message from his headmaster, 'Well goodbye, Graves and remember that your best friend is the wastepaper basket.' One of Diana, Princess of Wales's teacher was correct in that Diana wasn't a <span class="text-info"> 8_____</span> student, but the teacher also wrote, interrestingly, that she 'must try to be less emotional ... with others'.
-									</p>
-									<ul class="list-inline">1.  <li>a) at</li><li>b) for</li><li>c) in</li></ul>
-									<ul class="list-inline">2.  <li>a) useless</li><li>b) useful</li><li>c) gifted</li></ul>
-									<ul class="list-inline">3.  <li>a) skilful</li><li>b) hopeless</li><li>c) an expert</li></ul>
-									<ul class="list-inline">4.  <li>a) useless</li><li>b) hopeless</li><li>c) skilful</li></ul>
-									<ul class="list-inline">5.  <li>a) of ability</li><li>b) of skilful</li><li>c) of talented</li></ul>
-									<ul class="list-inline">6.  <li>a) expert in</li><li>b) aptitude for</li><li>c) aptitude to</li></ul>
-									<ul class="list-inline">7.  <li>a) gifted</li><li>b) expert</li><li>c) talent in</li></ul>
-									<ul class="list-inline">8.  <li>a) gifted at</li><li>b) expert</li><li>c) talented</li></ul>
-								</div>
-							</div>
-							<div class="col-md-3 blog-sidebar">
-								<h3>Top Exercises</h3>
-								<div class="top-news">
-									<a href="#" class="btn red">
-									<span>
-										Writing
-									</span>
-									<em>Posted on: Janaury 16, 2015</em>
-									<em>
-									<i class="fa fa-tags"></i>
-									email, Business </em>
-									<i class="fa  fa-file-text-o top-news-icon"></i>
-									</a>
-									<a href="#" class="btn green">
-									<span>
-										Listening
-									</span>
-									<em>Posted on: Dicember 15, 2014</em>
-									<em>
-									<i class="fa fa-tags"></i>
-									Internet, Music, People </em>
-									<i class="fa fa-music top-news-icon"></i>
-									</a>
-								</div>
-								<div class="space20">
+									<div class="space20">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -143,18 +109,58 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="footer">
-		<div class="footer-inner">2015 &copy; Workshop by Humberto Segundo R.</div>
-	</div>
-<!--[if lt IE 9]>
-<script src="assets/plugins/respond.min.js"></script>
-<script src="assets/plugins/excanvas.min.js"></script> 
-<![endif]-->
+		<div class="footer">
+			<div class="footer-inner">2015 &copy; Workshop by Humberto Segundo R.</div>
+		</div>
+		<!--[if lt IE 9]>
+		<![endif]-->
+	</script>
+	<script type="text/x-handlebars" data-template-name="test/vocabulary">
+		<h5><strong> UNIT 7. Chose the correct options to complete the text.</strong></h5>
+		<div class="blog-tag-data col-md-4">
+			<img src="assets/img/gallery/john.jpeg" class="img-responsive" alt="">
+			<div class="row">
+				<div class="col-md-6">
+					<ul class="list-inline blog-tags">
+						<li>
+							<i class="fa fa-tags"></i>
+							<a href="#">Vocabulary</a>
+							<a href="#">Reading</a>
+							<a href="#">Grammar</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-6 blog-tag-data-inner">
+					<ul class="list-inline">
+						<li>
+							<i class="fa fa-calendar"></i><a href="#">February 25, 2015</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<p>
+			<strong>S</strong>chooltearchers may be expert <span class="text-info"> 1_____</span> their subject, but they aren't always right about their studient.
+			Some of the most brilliant people in British history were <span class="text-info"> 2_____</span> at shool report and got terrible reports. In his school report, John Lennon was describe as <span class="text-info"> 3_____</span> - certainly on the road to failure. Winston Churchill, future Prime Minister and probably Britain's most <span class="text-info"> 4_____</span> politian, clearly bad a lot <span class="text-info"> 5_____</span> as a student, but his behaviour was so bad that his teacher wrote, I really don't know what to do. Stephe Fry's teacher didn't realise Fry had an <span class="text-info"> 6_____</span> English. A fine actor, comedian and writer, Fry was bottom of his class. Robert Graves, a <span class="text-info"> 7_____</span> shoolboy writer who became one of Britain's greatest poets, left school with this message from his headmaster, 'Well goodbye, Graves and remember that your best friend is the wastepaper basket.' One of Diana, Princess of Wales's teacher was correct in that Diana wasn't a <span class="text-info"> 8_____</span> student, but the teacher also wrote, interrestingly, that she 'must try to be less emotional ... with others'.
+			</p>
+			<ul class="list-inline">1.  <li>a) at</li><li>b) for</li><li>c) in</li></ul>
+			<ul class="list-inline">2.  <li>a) useless</li><li>b) useful</li><li>c) gifted</li></ul>
+			<ul class="list-inline">3.  <li>a) skilful</li><li>b) hopeless</li><li>c) an expert</li></ul>
+			<ul class="list-inline">4.  <li>a) useless</li><li>b) hopeless</li><li>c) skilful</li></ul>
+			<ul class="list-inline">5.  <li>a) of ability</li><li>b) of skilful</li><li>c) of talented</li></ul>
+			<ul class="list-inline">6.  <li>a) expert in</li><li>b) aptitude for</li><li>c) aptitude to</li></ul>
+			<ul class="list-inline">7.  <li>a) gifted</li><li>b) expert</li><li>c) talent in</li></ul>
+			<ul class="list-inline">8.  <li>a) gifted at</li><li>b) expert</li><li>c) talented</li></ul>
+		</div>
+	</script>
 	<script src="../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="../bower_components/handlebars/handlebars.js"></script>
 	<script src="../bower_components/ember/ember.js"></script>
-	<script src="../bower_components/ember-data/ember-data.js"></script>
+	<script src="../bower_components/ember/ember-template-compiler.js"></script>
+	<!--script src="../bower_components/ember-data/ember-data.js"></script-->
+	<script src="js/application.js"></script>
+  	<script src="js/router.js"></script>
 </body>
 </html>
