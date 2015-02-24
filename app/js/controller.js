@@ -19,68 +19,77 @@ Test.TestVocabularyController = Ember.ObjectController.extend({
   	seven:{number:'seven',letter:''},
   	eight:{number:'eight',letter:''}
   },
-  spaceOne : function(){
+  spaceone : function(){
   	var result = '____';
   	var letter = this.selectByUser.one.letter;
   	if(letter){
   		result = this.options.one[letter];
   	}
   	return result;
-  }.property('model.spaceOne'),
-  spaceTwo : function(){
+  }.property('model.spaceone'),
+  spacetwo : function(){
   	var result = '____';
   	var letter = this.selectByUser.two.letter;
   	if(letter){
   		result = this.options.two[letter];
   	}
   	return result;
-  }.property('model.spaceTwo'),
-  spaceThree : function(){
+  }.property('model.spacetwo'),
+  spacethree : function(){
   	var result = '____';
   	var letter = this.selectByUser.three.letter;
   	if(letter){
   		result = this.options.three[letter];
   	}
   	return result;
-  }.property('model.spaceThree'),
-  spaceFour : function(){
+  }.property('model.spacethree'),
+  spacefour : function(){
   	var result = '____';
   	var letter = this.selectByUser.four.letter;
   	if(letter){
   		result = this.options.four[letter];
   	}
   	return result;
-  }.property('model.spaceFour'),
-  spaceFive: function(){
+  }.property('model.spacefour'),
+  spacefive: function(){
   	var result = '____';
   	var letter = this.selectByUser.five.letter;
   	if(letter){
   		result = this.options.five[letter];
   	}
   	return result;
-  }.property('model.spaceFive'),
-  spaceSix : function(){
+  }.property('model.spacefive'),
+  spacesix : function(){
   	var result = '____';
   	var letter = this.selectByUser.six.letter;
   	if(letter){
   		result = this.options.six[letter];
   	}
   	return result;
-  }.property('model.spaceSix'),
-  spaceSeven : function(){
+  }.property('model.spacesix'),
+  spaceseven : function(){
   	var result = '____';
   	var letter = this.selectByUser.seven.letter;
   	if(letter){
   		result = this.options.seven[letter];
   	}
   	return result;
-  }.property('model.spaceSeven'),
-  spaceEight : function(){
+  }.property('model.spaceseven'),
+  spaceeight : function(){
   	var result = '____';
   	var letter = this.selectByUser.eight.letter;
   	if(letter){
   		result = this.options.eight[letter];
   	}
   	return result;
-  }.property('model.spaceEight')
+  }.property('model.spaceeight'),
+  actions:{
+    setSelection:function(number, letter){
+      var selected = this.selectByUser[number];
+      selected.letter = letter;
+      var chosen = this.options[selected.number][selected.letter]
+      this.set('model.space'+number,chosen)
+      this.transitionToRoute('/vocabulary',this.selectByUser);
+    }
+  }
 });
