@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "ember": "~1.10.0",
-    "ember-data": "~1.0.0-beta.8"
+    "ember-data": "~1.0.0-beta.8",
+    "ember-qunit": "0.2.10"
   }
 }
