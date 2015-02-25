@@ -7,7 +7,11 @@ Test.Vocabulary = DS.Model.extend({
   spacefive: DS.attr('string'),
   spacesix: DS.attr('string'),
   spaceseven: DS.attr('string'),
-  spaceeight: DS.attr('string')
+  spaceeight: DS.attr('string'),
+  farewell: DS.attr('string'),
+  sayGoodBye: function() {
+    this.set('farewell', 'It was a pleasure to be here, bye');
+  }
 });
 
 Test.Vocabulary.reopenClass({
